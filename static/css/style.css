@@ -1,0 +1,347 @@
+html {
+    font-size: 18px;
+}
+
+body{
+    line-height: 1;
+    font-family: "Manrope";
+}
+
+/* sidebar */
+
+.sidenav {
+  text-align: center;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f8f9fa!important;
+  overflow-x: hidden;
+  transition: 0.5s;
+  box-shadow: 0px 0px 8px #888888;
+  padding-top: 5%;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #343a40;
+  display: block;
+  transition: 0.3s;
+  line-height: 55px;
+}
+
+.sidenav a:hover {
+    background-color: #cdf7e2;
+}
+
+.sidenav::-webkit-scrollbar {
+  display: none;
+}
+
+
+.animated-icon {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  border-color: #f1f1f1;
+}
+
+.animated-icon span {
+display: block;
+position: absolute;
+height: 3px;
+width: 100%;
+border-radius: 9px;
+opacity: 1;
+left: 0;
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-o-transform: rotate(0deg);
+transform: rotate(0deg);
+-webkit-transition: .25s ease-in-out;
+-moz-transition: .25s ease-in-out;
+-o-transition: .25s ease-in-out;
+transition: .25s ease-in-out;
+}
+
+.animated-icon span {
+background: #111111;
+}
+
+.animated-icon span:nth-child(1) {
+top: 0px;
+-webkit-transform-origin: left center;
+-moz-transform-origin: left center;
+-o-transform-origin: left center;
+transform-origin: left center;
+}
+
+.animated-icon span:nth-child(2) {
+top: 10px;
+-webkit-transform-origin: left center;
+-moz-transform-origin: left center;
+-o-transform-origin: left center;
+transform-origin: left center;
+}
+
+.animated-icon span:nth-child(3) {
+top: 20px;
+-webkit-transform-origin: left center;
+-moz-transform-origin: left center;
+-o-transform-origin: left center;
+transform-origin: left center;
+}
+
+.animated-icon.open span:nth-child(1) {
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+transform: rotate(45deg);
+top: 0px;
+left: 8px;
+}
+
+.animated-icon.open span:nth-child(2) {
+width: 0%;
+opacity: 0;
+}
+
+.animated-icon.open span:nth-child(3) {
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+transform: rotate(-45deg);
+top: 21px;
+left: 8px;
+}
+button {border:none !important;}
+/*button:focus{outline: none;}*/
+
+.center {
+left: 50%;
+-webkit-transform: translateX(-50%);
+transform: translateX(-50%);
+text-align: center;
+vertical-align: middle;
+}
+
+.navbar-toggler {
+    color: #f1f1f1 !important;
+    margin-left: 25px;
+}
+
+
+.img_wrapper{
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.bg_img{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+}
+.motto-wrapper{
+  text-align: center;
+  font-size: 50px;
+  font-family: math;
+  margin-bottom: 3rem;
+  background-color: lightgreen;
+  .motto-text{
+    margin-top: 25px;
+  }
+}
+
+
+.banner-text{
+  position: absolute;
+  font-size: 40px;
+}
+
+.banner{
+  height: 50%;
+  width: 100%;
+}
+
+.place-row{
+  text-align: center;
+}
+.place-card{
+  margin-bottom: 90px;
+}
+
+.text_wrapper{
+  margin-left: 11%;
+  text-align: left;
+  .title{
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .description{
+    color: #535150;
+  }
+}
+
+.footer{
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  #background-color: #cdf7e2;
+  margin-top: 10% !important;
+  padding-top: 20px;
+}
+
+.logo{
+  height: 100px;
+}
+
+/* Buttons */
+.button_wrapper {
+  text-align: left;
+  padding-left: 11%;
+
+  .contact-btn {
+    align-self: flex-start;
+    background-color: lightgreen;
+    padding: 5px;
+    width: 100px;
+  }
+    .contact-btn:hover {
+      background-color: lightgreen !important;
+    }
+
+
+  .more-btn {
+    border-color: lightgreen;
+    margin-left: 10px;
+  }
+  .more-btn:hover{
+    border-color: lightgreen;
+  }
+}
+
+.img_wrapper .img-class{
+      height: 490px;
+  }
+
+.footer{
+  .footer-logo{
+    margin-top: 30px;
+    width: 295px;
+    margin-left: -50px !important;
+    margin-bottom: 30px;
+  }
+}
+
+.profile-card{
+  text-align: center;
+  .profile {
+    height: 340px;
+    width: 300px;
+    border-radius: 10px;
+}
+  .description{
+    margin-top: -15px;
+  }
+}
+
+/* Modal */
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal-content {
+  margin-top: -70px;
+  background-color: #fefefe;
+  /*margin: 15% auto; !* 15% from the top and centered *!*/
+  padding: 20px 60px 60px 60px !important;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-label {
+    margin-bottom: 0.1rem !important;
+    margin-top: 16px;
+}
+
+#submit-btn {
+  margin-top: 20px;
+}
+
+.modal-content input, select {
+  border-radius: 10px;
+  border-width: 1.2px;
+  padding: 10px;
+}
+
+.modal-content #submit-btn {
+  background-color: lightgreen;
+  border-color: transparent;
+}
+
+.profile-card > .name > p {
+  font-weight: bold;
+}
+
+.profile-card > .name{
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.profile-card > description {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.price{
+  margin-left: 25px;
+  font-family: Manrope;
+  font-size: 21px;
+}

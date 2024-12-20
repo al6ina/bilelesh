@@ -1,0 +1,208 @@
+{% extends "bilelesh/base.html" %}
+
+{% block content %}
+        <!--Navbar-->
+    <nav class="navbar navbar-light" style="padding-top: 0; padding-bottom: 0;">
+        <!-- Collapse button -->
+        <button class="navbar-toggler hamburger-button" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" onclick="Nav()" style="z-index: 2">
+            <div class="animated-icon"><span></span><span></span><span></span></div>
+        </button>
+        <!-- Navbar brand -->
+        <div class="mx-auto order-0">
+{#            <a class="navbar-brand mx-auto" href="#">Here will be logo</a>#}
+             <img src="../../../static/img/logo_last-r1.png" class="navbar-brand mx-auto logo">
+        </div>
+    </nav>
+    <!--/.Navbar-->
+
+    <!--Banner-->
+    <div class="banner_wrapper">
+
+        <img src="../../../static/img/home_thumb.jpg" class="banner">
+    </div>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-1 d-flex justify-content-center">
+            <div id="mySidenav" class="sidenav">
+                <a href="/">Main</a>
+                <a onclick="document.getElementById('book-modal').style.display='block'">Booking</a>
+                <a href="#">About us</a>
+                <a href="#">Spaces</a>
+                <a href="#">Events</a>
+                <a href="#">Contacts</a>
+            </div>
+        </div>
+    </div>
+    <!-- Book modal -->
+    <div id="book-modal" class="modal">
+      <div class="modal-content container">
+      <span onclick="document.getElementById('book-modal').style.display='none'" class="close">&times;</span>
+          <h3>Book a place in a coworking</h3>
+          <p>Fill out the form and we will call you back to confirm all the details</p>
+          <form action="/" method="get">
+              <div class="form-label">
+                  Select a date range
+              </div>
+
+            <input id="start_book_date" type="datetime-local" name="start_date" placeholder="start date" value="{{ book_start_date }}">
+            <input id="end_book_date" type="datetime-local" name="end_date" placeholder="end date" value="{{ book_end_date }}">
+               <div class="form-label">
+                  Number of people
+              </div>
+            <input id="people_count" type="number" name="people_count" placeholder="1" min=1 value="1{{ people_count }}">
+              <div class="form-label">
+                 Room type
+              </div>
+              <select class="w3-select" name="option">
+                     <option value="" disabled selected>Choose room type</option>
+                     <option name="room_type" value="1">Office</option>
+                     <option name="room_type" value="2">Open space</option>
+                     <option name="room_type" value="3">Meeting room</option>
+                     <option name="room_type" value="4">Conference</option>
+             </select>
+             <div class="form-label">
+                  Phone number
+             </div>
+              <input id="phone_number" type="tel" name="phone_number" placeholder="99361001122" value="{{ phone_number }}">
+              <div class="confirm">
+                  <input type="submit" value="Send a reservation" id="submit-btn">
+              </div>
+</form>
+      </div>
+    </div>
+
+    <!--Motto-->
+    <div class="col-lg-12 motto-wrapper">
+        <p class="motto-text">Connect.Collaborate.Cowork</p>
+    </div>
+
+
+
+     <!-- Places -->
+    <div class="row place-row">
+        <div class="col-lg-6">
+            <div class="place-card">
+                <div class="img_wrapper">
+                    <img src="../../../static/img/office_place.jpeg" class="img-class">
+                </div>
+                 <div class="text_wrapper">
+                    <p class="title">Offices</p>
+                    <p class="description">For start-ups and large companies</p>
+                </div>
+                <div class="button_wrapper">
+                   <button class="btn contact-btn" onclick="document.getElementById('book-modal').style.display='block'">Book</button>
+                    <span class="price"> <b>80 TMT</b>/hour </span>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-6">
+        <div class="place-card">
+            <div class="img_wrapper">
+                <img src="../../../static/img/openspace_place.png" class="img-class">
+            </div>
+            <div class="text_wrapper">
+                 <p class="title">Open space</p>
+                 <p class="description">All conditions for freelancers and remote workers</p>
+            </div>
+            <div class="button_wrapper">
+               <button class="btn contact-btn" onclick="document.getElementById('book-modal').style.display='block'">Book</button>
+                <span class="price"> <b>30 TMT</b>/hour </span>
+            </div>
+        </div>
+    </div>
+        <div class="col-lg-6">
+            <div class="place-card">
+                <div class="img_wrapper">
+                    <img src="../../../static/img/meeting-room_place.jpeg" class="img-class">
+                </div>
+                <div class="text_wrapper">
+                    <p class="title">Meeting-room</p>
+                    <p class="description">For meetings, presentations, courses, training, and teamwork</p>
+                </div>
+                <div class="button_wrapper">
+                   <button class="btn contact-btn" onclick="document.getElementById('book-modal').style.display='block'">Book</button>
+                    <span class="price"> <b>240 TMT</b>/hour </span>
+                </div>
+            </div>
+        </div>
+    <div class="col-lg-6">
+        <div class="place-card">
+            <div class="img_wrapper">
+                <img src="../../../static/img/conference_place.jpeg" class="img-class">
+            </div>
+             <div class="text_wrapper">
+                  <p class="title">Conference</p>
+                  <p class="description">Recognisable location, capacity from 10 to 120 people</p>
+             </div>
+            <div class="button_wrapper">
+              <button class="btn contact-btn" onclick="document.getElementById('book-modal').style.display='block'">Book</button>
+              <span class="price"> <b>400 TMT</b>/hour </span>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg-12"><p style="font-size: 40px; text-align: center; margin-bottom: 30px">Our team</p></div>
+         <div class="col-lg-3">
+             <div class="profile-card">
+                 <img src="../../../static/img/1.jpg" class="profile">
+                 <div class="name"><p>Maysa Ovezova</p></div>
+                 <div class="description"><p>PR manager</p></div>
+             </div>
+         </div>
+         <div class="col-lg-3">
+              <div class="profile-card">
+                  <img src="../../../static/img/2.jpg" class="profile">
+                 <div class="name"><p>Bahar Chariyeva</p></div>
+                  <div class="description"><p>Executive Officer</p></div>
+             </div>
+         </div>
+        <div class="col-lg-3">
+              <div class="profile-card">
+                 <img src="../../../static/img/3.JPG" class="profile">
+                 <div class="name"><p>Leyla Dolyyeva</p></div>
+                  <div class="description"><p>Finance Officer</p></div>
+             </div>
+         </div>
+         <div class="col-lg-3">
+             <div class="profile-card">
+                 <img src="../../../static/img/4.jpg" class="profile">
+                 <div class="name"><p>Albina Beshimova</p></div>
+                 <div class="description"><p>IT manager</p></div>
+             </div>
+
+         </div>
+
+    </div>
+    <!--Footer-->
+
+</div>
+<div class="row footer">
+    <div class="col-lg-3" style="text-align: center">
+         <img src="../../../static/img/logo_last-r1.png" class="navbar-brand mx-auto footer-logo">
+    </div>
+    <div class="col-lg-3">
+        <b style="line-height: 25px">Places</b><br>
+        <a>Offices</a><br>
+        <a>Open spaces</a><br>
+        <a>Conference-halls</a><br>
+        <a>Meeting rooms</a><br>
+    </div>
+    <div class="col-lg-3">
+        <b style="line-height: 25px">Events</b><br>
+        <a>Conference-halls</a><br>
+        <a>Meeting rooms</a><br>
+        <a>Promotion</a><br>
+    </div>
+    <div class="col-lg-3">
+        <b style="line-height: 25px">About Bileleş</b><br>
+        <a>About us</a><br>
+        <a>Community</a><br>
+        <a>Contacts</a><br>
+    </div>
+</div>
+{% endblock content %}
